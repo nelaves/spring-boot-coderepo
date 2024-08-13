@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <script type="text/javascript">
+    	var baseurl = "https://dfs-qs-new.documentum.basf.net/dctm-rest/repositories/Contentstore/groups/qms_admin_group/users";
+    	function loadGroupusers(){
+    		var xmlhttp = new XMLHttpRequest();
+    		xmlhttp.open("GET",baseurl,true);
+    		xmlhttp.onreadystatechange= function(){
+    			if(xmlhttp.readyState === 4 && xmlhttp.status===200){
+    				var persons = JSON.parse(xmlhttp.responseText);	
+    				alert(persons.length)
+    			}
+    		}
+    		
+    	}
+    
+    </script>
+</head>
+<body>
+	<h1>Result Display</h1>
+ 	
+</body>
+</html>
